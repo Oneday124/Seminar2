@@ -30,7 +30,7 @@ int[] array = new int[length];
 FillArray(array,-10,10); //Вызов функции заполнения масива рандомными значениями в интервале
 PrintArray(array); //Вызов функции печати массива
 Console.Write("Enter element to find in array: ");
-int value = int.Parse(Console.ReadLine() ?? "0"); //?? ставится что бы не было желтого текста в терминале перед программиой
+int value = int.Parse(Console.ReadLine() ?? "0"); //?? ставится чтобы не было желтого текста в терминале перед программиой (Это проверка на 0)
 int index = IndexOf(array,value); // Присвоение значения индексу элемента, значения, которое возвращает функция возврата элемента массива
 if(index == -1) //Если элемент массива не найден
     Console.WriteLine("Array doen'n constains this value "); // вывод этого сообщения
