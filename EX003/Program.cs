@@ -12,7 +12,7 @@ return result;
 }
 
 Console.WriteLine("Ввидите число: ");
-int x = int.Parse(Console.ReadLine());
+int x = int.Parse(Console.ReadLine() ??"0");
 
 if(Multiple(x))
     Console.WriteLine($"Число {x} кратно 7");
