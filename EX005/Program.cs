@@ -6,25 +6,28 @@ void PrintArray(int[] array) //Функция печати массива в т�
         Console.Write($"{element} ");
     Console.WriteLine();
 }
+int[] CreateArray (int num)
+{
+    int[] array = new int[5];
+    for(int i = 0; i < array.Length; i++)
+    {
+        int current = num % 10;
+        array[i] = current;
+        num = num / 10;
+    } 
+    return array;
+}
+
 Console.WriteLine("Введите пятизначное число: ");
-int number = int.Parse(Console.ReadLine());
-int[] array = {0,0,0,0,0};
-int i = 0;
+int number = int.Parse(Console.ReadLine() ??"0");
 
-while(number > 0)
-{
-    int current = number % 10;
-    array[i] = current;
-    i++;
-    number = number / 10;
-} 
-int[] array2 = {0,0,0,0,0};
-int index = 0;
+int[] array = CreateArray(number); 
 
-while(index < array2.Length)
+int[] array2 = new int[5];
+int lenght = array.Length;
+for(int j = 0; j < lenght; j++)
 {
-    array2[index] = array[4 - index];
-    index++;
+    array2[j] = array[lenght -1 - j];
 }
 
 PrintArray(array);
