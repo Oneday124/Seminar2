@@ -1,6 +1,6 @@
 ﻿// Программа проверяет пятизначное число на полиндром. Решение группы
 
-int x = int.Parse(Console.ReadLine());
+int x = int.Parse(Console.ReadLine() ??"0");
 
 int a1 = (x / 10000);
 int a2 = (x / 1000)-a1*10;
